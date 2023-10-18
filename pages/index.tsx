@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <p className="sm:text-xl text-lg max-w-md font-bold text-slate-900 mt-5">
           Using OpenAI's Whisper + GPT-3 API
         </p>
-        <div className="flex mt-5 mb-[-5px]">
+        <div className="flex mt-5 mb-[-5px] gap-4">
           <button
             className={`px-4 py-2 font-semibold rounded-md ${mode ? "bg-black text-white" : "bg-gray-300 text-black"}`}
             onClick={() => setMode(!mode)}>
@@ -40,12 +40,11 @@ const Home: NextPage = () => {
       </main>
       <footer className="w-full">
         <p className="border-t-z flex justify-center font-semibold py-2">
-          Learn any langiage with LetsTransalate
+          Learn any language with Lets-Transalate
         </p>
       </footer>
     </div>
   )
 }
 
-
-export default Home;
+export default Home

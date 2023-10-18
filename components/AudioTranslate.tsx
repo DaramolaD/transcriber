@@ -36,7 +36,7 @@ const AudioTranslate = () => {
             })
     }
     console.log("cjeckinh:, ", process.env.OPENAI_API_KEY);
-    
+
     const translateAudio = async () => {
         setGeneratedTranslation('');
         setLoading(true);
@@ -62,7 +62,7 @@ const AudioTranslate = () => {
         <div>
             <div className="max-w-xl w-full">
                 <div className="flex flex-row mt-10 items-center space-x-3">
-                    <Image src="/1-black.PNG" width={50} height={50} alt="1 icon" className="mb-5 sm:mb-0" />
+                    <Image src="/1-black.PNG" width={50} height={50} alt="1 icon" className="mb-5 sm:mb-0 rounded-full" />
                     <div className="">
                         <p className="text-left font-medium">
                             Upload Your Audio File {""}
@@ -70,41 +70,43 @@ const AudioTranslate = () => {
                         </p>
                     </div>
                 </div>
-                <label htmlFor="" className="black mb-2 text-sm text-left font-medium text-gray-900 dark:text">
+                <label htmlFor="" className="black pb-4 text-sm text-left font-medium text-gray-900 dark:text">
                     Upload file:
                 </label>
                 <input type="file"
-                    className="black mb-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg"
+                    className="black mb-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-4"
                     accept="/audio/*"
                     onChange={handleFileChange}
                 />
                 <p className="my-2 text-sm text-gray-500 dark:text-gray-300">
                     The following file formats are accepted: mp4, mp3, webm, mp4, mpga, wav, and npeg
                 </p>
-                <div className="flex mb-5 items-center space-x-1">
-                    <Image src="/1-black.PNG" width={30} height={30} alt="i icon" />
+                <div className="flex my-5 items-center space-x-1">
+                    <Image src="/1-black.PNG" width={30} height={30} alt="i icon" className="rounded-full" />
                     <p className="text-left font-medium">Choose your language.</p>
                 </div>
-                <select
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg"
-                    onChange={handleChange}
-                    value={language}
-                >
-                    {languages.map((language) => (
-                        <option key={language.value} value={language.value}>
-                            {language.label}
-                        </option>
-                    ))}
-                </select>
-
-                {!loading && (
-                    <button
-                        className="bg-black rounded-xl text-white fonr-medium px-4 py-2 sm:mt-10 mt-a"
-                        onClick={translateAudio}
+                <div className="flex gap-3">
+                    <select
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2"
+                        onChange={handleChange}
+                        value={language}
                     >
-                        Traslate &rarr;
-                    </button>
-                )}
+                        {languages.map((language) => (
+                            <option key={language.value} value={language.value}>
+                                {language.label}
+                            </option>
+                        ))}
+                    </select>
+
+                    {!loading && (
+                        <button
+                            className="bg-black rounded-xl text-white fonr-medium px-4 py-2"
+                            onClick={translateAudio}
+                        >
+                            Traslate &rarr;
+                        </button>
+                    )}
+                </div>
                 {loading && (
                     <button
                         className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10"

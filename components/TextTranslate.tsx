@@ -17,7 +17,7 @@ const TextTranslate = () => {
     const translateText = async () => {
         setGeneratedTranslation("")
         setLoading(true)
-        const response = await fetch ("/api/generate", {
+        const response = await fetch("/api/generate", {
             method: "Post",
             headers: {
                 "Content-type": "application/json",
@@ -29,7 +29,7 @@ const TextTranslate = () => {
         })
         const data = await response.json();
         console.log("final data", data);
-        
+
         setGeneratedTranslation(data.data)
         setLoading(false)
     }
@@ -38,49 +38,51 @@ const TextTranslate = () => {
         const selectedLabel = languages.find(
             (language) => language.value === selectedValue
         )?.value;
-        if(selectedLabel) {
+        if (selectedLabel) {
             setLanguage(selectedLabel)
         }
     };
 
     return (
         <div className="max-w-xl w-full">
-            <div className="flex mt-10 items-center space-x-3">
-                <Image src="/1-black.PNG" width={30} height={30} alt="i icon" />
+            <div className="flex my-10 items-center space-x-3">
+                <Image src="/1-black.PNG" width={30} height={30} alt="i icon" className="rounded-full"/>
                 <p className="text-left text-3xl font-bold underline">
-                    Enter the test you want to translate
+                    Enter the text you want to translate
                 </p>
             </div>
             <textarea
-                className="block p-2.5 my-3 w-full h-[80px] text-sm text-gray-900 bg-gray-50 rounded-lg"
+                className="block p-2.5 my-3 w-full h-[80px] text-sm text-black rounded-lg bg-gray-300 outline-none"
                 placeholder="Write your text here."
                 onChange={(e) => setText(e.target.value)}>
             </textarea>
-            <div className="flex mb-5 items-center space-x-3">
-                <Image src="/1-black.png" width={30} height={30} alt="i icon" />
+            <div className="flex my-5 items-center space-x-3">
+                <Image src="/1-black.png" width={30} height={30} alt="i icon" className="rounded-full"/>
                 <p className="text-left font-medium">Choose your language.</p>
             </div>
-            <select
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-block"
-                onChange={handleChange}
-                value={language}
-            >
-                {languages.map((language) => (
-                    <option key={language.value} value={language.value}>
-                        {language.label}
-                    </option>
-                ))}
-
-            </select>
-
-            {!loading && (
-                <button
-                    className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8"
-                    onClick={translateText}
+            <div className="flex">
+                <select
+                    className="p-2 mr-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-block"
+                    onChange={handleChange}
+                    value={language}
                 >
-                    Translate &rarr;
-                </button>
-            )}
+                    {languages.map((language) => (
+                        <option key={language.value} value={language.value}>
+                            {language.label}
+                        </option>
+                    ))}
+
+                </select>
+
+                {!loading && (
+                    <button
+                        className="bg-black rounded-xl text-white font-medium px-4 py-2"
+                        onClick={translateText}
+                    >
+                        Translate &rarr;
+                    </button>
+                )}
+            </div>
 
             {loading && (
                 <button
