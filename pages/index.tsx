@@ -12,15 +12,15 @@ import Header from "@/components/Header"
 const Home: NextPage = () => {
   const [mode, setMode] = useState<boolean>(true)
   return (
-    <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex max-w-5xl mx-auto flex-col items-center justify-center min-h-screen">
       <Header />
-      <main className="flex max-w-5xl mx-auto flex-col items-center justify-center text-center px-4 mb-[100px] sm:mt-20">
+      <main className="flex max-w-5xl mx-auto flex-col items-center justify-center text-center px-4 mb-[100px] mt-14">
         <h1 className="sm:text-7xl text-4xl max-w-2xl font-bold text-slate-900">
           Let's Translate
         </h1>
 
         <p className="sm:text-xl max-w-md text-slate-900 mt-1.5 text-base">
-          Break Down Language Barriers with Let's Translate
+          Break Down Language Barriers with Let&apos;s Translate
         </p>
         <p className="sm:text-xl text-lg max-w-md font-bold text-slate-900 mt-5">
           Your All-in-One Translation and Transcription App

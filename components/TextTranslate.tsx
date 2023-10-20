@@ -55,7 +55,7 @@ const TextTranslate = () => {
                 <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
                     <h2 className="text-xl">1</h2>
                 </div>
-                <p className="text-left text-3xl font-bold underline">
+                <p className="text-left text-lg font-bold underline">
                     To Translate: Enter Your Text
                 </p>
             </div>
@@ -69,7 +69,7 @@ const TextTranslate = () => {
                 <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
                     <h2 className="text-xl">2</h2>
                 </div>
-                <p className="text-left font-medium">Choose your language.</p>
+                <p className="text-left text-lg font-bold underline">Choose your language.</p>
             </div>
             <div className="flex">
                 <select

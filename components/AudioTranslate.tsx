@@ -67,7 +67,7 @@ const AudioTranslate = () => {
                         <h2 className="text-xl">1</h2>
                     </div>
                     <div className="">
-                        <p className="text-left text-3xl font-bold underline">
+                        <p className="text-left text-lg font-bold underline">
                             Upload Your Audio File {""}
                             <span className="text-slate-500"></span>
                         </p>
@@ -89,7 +89,7 @@ const AudioTranslate = () => {
                     <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
                         <h2 className="text-xl">2</h2>
                     </div>
-                    <p className="text-left font-medium">Choose your language.</p>
+                    <p className="text-left text-lg font-bold underline">Choose your language.</p>
                 </div>
                 <div className="flex gap-3">
                     <select

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Header() {
     return (
-        <header className="flex justify-between items-center max-w-5xl w-full border-b-2 pb-7 sm:px-4 py-3 px-2">
+        <header className="flex justify-between items-center max-w-5xl w-full border-b-2 sm:px-4 pt-4 pb-3 px-2">
             <Link href="/" className="flex space-x-3">
                 {/* <Image alt="header text"
                     src="/log.svg"
@@ -11,15 +11,17 @@ export default function Header() {
                     width={32}
                     height={32}
                 /> */}
-                <h3 className='text-2xl font-bold'>
-                    L<span>T</span>
-                </h3>
+                <div className="bg-black w-[50px] h-[50px] text-white flex items-center justify-center rounded-full">
+                    <h3 className='text-2xl font-bold'>
+                        L<span>T</span>
+                    </h3>
+                </div>
             </Link>
-            <div className="flex items-">
+            {/* <div className="flex items-">
                 <div className="bg-gray-200 rounded-full py-2 px-4 inline-flex items-center">
                     <p className="sm:text-2xl text-2xl font-bold ml-2 tracking-tight text-gray-700">Get Started </p>
                 </div>
-            </div>
+            </div> */}
         </header>
     )
 }
