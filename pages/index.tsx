@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <button
             className={`px-4 py-2 font-semibold rounded-md ${!mode ? "bg-black text-white" : "bg-gray-300 tetxt-black"}`}
             onClick={() => setMode(!mode)}>
-            Translate Audio
+            Transcribe Audio
           </button>
         </div>
         {mode ? <TextTranslate /> : <AudioTranslate />}

@@ -61,10 +61,13 @@ const AudioTranslate = () => {
     return (
         <div>
             <div className="max-w-xl w-full">
-                <div className="flex flex-row mt-10 items-center space-x-3">
-                    <Image src="/1-black.PNG" width={50} height={50} alt="1 icon" className="mb-5 sm:mb-0 rounded-full" />
+                <div className="flex flex-row mt-10 mb-2 items-center space-x-3">
+                    {/* <Image src="/1-black.PNG" width={50} height={50} alt="1 icon" className="mb-5 sm:mb-0 rounded-full" /> */}
+                    <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
+                        <h2 className="text-xl">1</h2>
+                    </div>
                     <div className="">
-                        <p className="text-left font-medium">
+                        <p className="text-left text-3xl font-bold underline">
                             Upload Your Audio File {""}
                             <span className="text-slate-500"></span>
                         </p>
@@ -82,7 +85,10 @@ const AudioTranslate = () => {
                     The following file formats are accepted: mp4, mp3, webm, mp4, mpga, wav, and npeg
                 </p>
                 <div className="flex my-5 items-center space-x-1">
-                    <Image src="/1-black.PNG" width={30} height={30} alt="i icon" className="rounded-full" />
+                    {/* <Image src="/1-black.PNG" width={30} height={30} alt="i icon" className="rounded-full" /> */}
+                    <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
+                        <h2 className="text-xl">2</h2>
+                    </div>
                     <p className="text-left font-medium">Choose your language.</p>
                 </div>
                 <div className="flex gap-3">
@@ -103,7 +109,7 @@ const AudioTranslate = () => {
                             className="bg-black rounded-xl text-white fonr-medium px-4 py-2"
                             onClick={translateAudio}
                         >
-                            Traslate &rarr;
+                            Translate &rarr;
                         </button>
                     )}
                 </div>
