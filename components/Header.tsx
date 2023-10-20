@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Header() {
     return (
-        <header className="flex justify-between items-center w-full mt-5 border-b-2 pb-7 sm:px-4 px-2">
+        <header className="flex justify-between items-center w-full border-b-2 pb-7 sm:px-4 py-3 px-2">
             <Link href="/" className="flex space-x-3">
                 {/* <Image alt="header text"
                     src="/log.svg"
@@ -17,7 +17,7 @@ export default function Header() {
             </Link>
             <div className="flex items-">
                 <div className="bg-gray-200 rounded-full py-2 px-4 inline-flex items-center">
-                    <p className="sm:text-2xl text-2xl font-bold ml-2 tracking-tight text-gray-700">Free, Fun, and </p>
+                    <p className="sm:text-2xl text-2xl font-bold ml-2 tracking-tight text-gray-700">Get Started </p>
                 </div>
             </div>
         </header>

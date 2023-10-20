@@ -35,20 +35,28 @@ const TextTranslate = () => {
     }
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedValue = event.target.value;
+        // const selectedLabel = languages.find(
+        //     (language) => language.value === selectedValue
+        // )?.value;
         const selectedLabel = languages.find(
             (language) => language.value === selectedValue
-        )?.value;
+        )?.label;
         if (selectedLabel) {
             setLanguage(selectedLabel)
         }
     };
+    console.log("language", language);
+
 
     return (
         <div className="max-w-xl w-full">
             <div className="flex my-10 items-center space-x-3">
-                <Image src="/1-black.PNG" width={30} height={30} alt="i icon" className="rounded-full"/>
+                {/* <Image src="/1-black.PNG" width={30} height={30} alt="i icon" className="rounded-full"/> */}
+                <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
+                    <h2 className="text-xl">1</h2>
+                </div>
                 <p className="text-left text-3xl font-bold underline">
-                    Enter the text you want to translate
+                    To Translate: Enter Your Text
                 </p>
             </div>
             <textarea
@@ -57,7 +65,10 @@ const TextTranslate = () => {
                 onChange={(e) => setText(e.target.value)}>
             </textarea>
             <div className="flex my-5 items-center space-x-3">
-                <Image src="/1-black.png" width={30} height={30} alt="i icon" className="rounded-full"/>
+                {/* <Image src="/1-black.png" width={30} height={30} alt="i icon" className="rounded-full" /> */}
+                <div className="w-[30px] h-[30px] rounded-full text-white bg-black flex items-center justify-center">
+                    <h2 className="text-xl">2</h2>
+                </div>
                 <p className="text-left font-medium">Choose your language.</p>
             </div>
             <div className="flex">

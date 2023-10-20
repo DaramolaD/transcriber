@@ -16,16 +16,20 @@ const Home: NextPage = () => {
       <Header />
       <main className="flex max-w-5xl mx-auto flex-col items-center justify-center text-center px-4 mb-[100px] sm:mt-20">
         <h1 className="sm:text-7xl text-4xl max-w-2xl font-bold text-slate-900">
-          Let Translate
+          Let's Translate
         </h1>
 
+        <p className="sm:text-xl max-w-md text-slate-900 mt-1.5 text-base">
+          Break Down Language Barriers with Let's Translate
+        </p>
         <p className="sm:text-xl text-lg max-w-md font-bold text-slate-900 mt-5">
-          Using OpenAI-s Whisper + GPT-3 API
+          Your All-in-One Translation and Transcription App
         </p>
         <div className="flex mt-5 mb-[-5px] gap-4">
           <button
             className={`px-4 py-2 font-semibold rounded-md ${mode ? "bg-black text-white" : "bg-gray-300 text-black"}`}
-            onClick={() => setMode(!mode)}>
+            onClick={() => setMode(!mode)}
+            >
             Translate Text
           </button>
           <button
