@@ -40,7 +40,7 @@ const TextTranslate = () => {
         // )?.value;
         const selectedLabel = languages.find(
             (language) => language.value === selectedValue
-        )?.label;
+        )?.value;
         if (selectedLabel) {
             setLanguage(selectedLabel)
         }
