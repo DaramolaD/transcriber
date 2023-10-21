@@ -16,14 +16,14 @@ const Home: NextPage = () => {
       <Header />
       <main className="flex max-w-5xl mx-auto flex-col items-center justify-center text-center px-4 mb-[100px] mt-14">
         <h1 className="sm:text-7xl text-4xl max-w-2xl font-bold text-slate-900">
-          Let's Translate
+          Let&apos;s Translate
         </h1>
 
         <p className="sm:text-xl max-w-md text-slate-900 mt-1.5 text-base">
           Break Down Language Barriers with Let&apos;s Translate
         </p>
         <p className="sm:text-xl text-lg max-w-md font-bold text-slate-900 mt-5">
-          Your All-in-One Translation and Transcription App
+          Your All&ndash;in&ndash;One Translation and Transcription App
         </p>
         <div className="flex mt-5 mb-[-5px] gap-4">
           <button
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
       </main>
       <footer className="w-full">
         <p className="border-t-z flex justify-center font-semibold py-2">
-          Learn any language with Lets-Transalate
+          Learn any language with Lets&ndash;Transalate
         </p>
       </footer>
     </div>
