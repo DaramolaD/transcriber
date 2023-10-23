@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import OpenAI from "openai";
+import fs from "fs"
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -17,17 +18,18 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const { prompt, currentModel } = req.body;
+    const { prompt, currentModel, language, file } = req.body;
     try {
-        const response = await openai.completions.create({
+        const response = await openai.audio.transcriptions.create({
             model: `${currentModel}`,
+            file: fs.createReadStream(`${file}`),
             prompt: `${prompt}`,
-            max_tokens: 1000,
-            temperature: 0.5
+            temperature: 0.5,
+            language: `${language}`
         });
         res.status(200).json({
             sucess: true,
-            data: response.choices[0].text,
+            data: response.text,
         });
     } catch (error) {
         if (error) {

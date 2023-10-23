@@ -28,7 +28,6 @@ const TextTranslate = () => {
             })
         })
         const data = await response.json();
-        console.log("final data", data);
 
         setGeneratedTranslation(data.data)
         setLoading(false)
@@ -45,8 +44,6 @@ const TextTranslate = () => {
             setLanguage(selectedLabel)
         }
     };
-    console.log("language", language);
-
 
     return (
         <div className="max-w-xl w-full">

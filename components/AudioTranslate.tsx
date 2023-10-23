@@ -24,7 +24,7 @@ const AudioTranslate = () => {
             formData.append("language", language);
         }
         const headers = new Headers();
-        headers.append("Authorization", "Bearer " + `"${process.env.OPENAI_API_KEY}"`);
+        headers.append("Authorization", "Bearer " + "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");
         return fetch(url, {
             method: "POST",
             body: formData,
@@ -35,7 +35,6 @@ const AudioTranslate = () => {
                 console.error(error);
             })
     }
-    console.log("cjeckinh:, ", process.env.OPENAI_API_KEY);
 
     const translateAudio = async () => {
         setGeneratedTranslation('');
